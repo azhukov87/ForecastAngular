@@ -1,0 +1,2 @@
+# ForecastAngular
+Forecast using Angular
