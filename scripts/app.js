@@ -7,12 +7,12 @@ wheatherApp.config(function ($routeProvider) {
     $routeProvider.
 
     when("/", {
-        templateUrl: "../pages/home.htm",
+        templateUrl: "/pages/home.htm",
         controller: "homeController"
     }).
 
     when("/forecast", {
-        templateUrl: "../forecast.html",
+        templateUrl: "/forecast.html",
         controller: "forecastController"
     });
 
