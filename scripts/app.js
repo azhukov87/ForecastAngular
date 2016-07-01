@@ -7,7 +7,7 @@ wheatherApp.config(function ($routeProvider) {
     $routeProvider.
 
     when("/", {
-        templateUrl: "forecast.html",
+        templateUrl: "./pages/home.html",
         controller: "homeController"
     }).
 
