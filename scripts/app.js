@@ -18,11 +18,20 @@ wheatherApp.config(function ($routeProvider) {
 
 });
 
-//CONTROLLERS
-wheatherApp.controller("homeController", ["$scope", function ($scope) {
+//SERVICES
+wheatherApp.service("cityService", function() {
+    this.city = "New York, NY";
+});
 
+//CONTROLLERS
+wheatherApp.controller("homeController", ["$scope", "cityService", function ($scope, cityService) {
+    $scope.city = cityService.city;
+
+    $scope.$watch('city', function() {
+        cityService.city = $scope.city;
+    });
 }]);
 
-wheatherApp.controller("forecastController", ["$scope", function ($scope) {
-
+wheatherApp.controller("forecastController", ["$scope", "cityService", function ($scope, cityService) {
+    $scope.city = cityService.city;
 }]);
